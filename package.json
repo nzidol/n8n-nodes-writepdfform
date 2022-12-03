@@ -1,16 +1,14 @@
 {
   "name": "n8n-nodes-writepdfform",
-  "version": "0.1.0",
-  "description": "Fill PDF From fields from a JSON struct",
+  "version": "0.3.0",
+  "description": "n8n node to write PDF form data",
   "keywords": [
-    "n8n-community-node-package",
-    "PDF"
+    "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": "nzidolnz@gmail.com"
+    "name": "nzidol"
   },
   "repository": {
     "type": "git",
@@ -20,35 +18,34 @@
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
-    "format": "prettier nodes credentials --write",
-    "lint": "tslint -p tsconfig.json -c tslint.json && eslint nodes credentials package.json",
-    "lintfix": "tslint --fix -p tsconfig.json -c tslint.json && eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "format": "prettier nodes --write",
+    "lint": "tslint -p tsconfig.json -c tslint.json && eslint nodes package.json",
+    "lintfix": "tslint --fix -p tsconfig.json -c tslint.json && eslint nodes package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes package.json"
   },
   "files": [
     "dist"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [],
     "nodes": [
-      "dist/nodes/WritePdfForm/WritePdfForm.node.js"
+      "dist/nodes/WritePDFForm/WritePDFForm.node.js"
     ]
   },
   "devDependencies": {
-    "@types/express": "^4.17.14",
-    "@types/node": "^18.11.9",
-    "@types/request-promise-native": "~1.0.18",
-    "@typescript-eslint/parser": "^5.43.0",
-    "eslint-plugin-n8n-nodes-base": "^1.11.0",
+    "@types/express": "^4.17.6",
+    "@types/request-promise-native": "~1.0.15",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint-plugin-n8n-nodes-base": "^1.5.4",
     "gulp": "^4.0.2",
-    "n8n-core": "^0.142.1",
-    "n8n-workflow": "^0.124.1",
+    "n8n-core": "^0.125.0",
+    "n8n-workflow": "^0.107.0",
     "prettier": "^2.7.1",
-    "tslint": "^6.1.3",
-    "typescript": "~4.9.3"
+    "tslint": "^6.1.2",
+    "typescript": "~4.6.0"
   },
   "dependencies": {
+    "@types/node": "^18.6.3",
     "pdf-lib": "^1.17.1"
   }
 }
